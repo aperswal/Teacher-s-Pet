@@ -94,7 +94,7 @@ def student_homework_line_graph(name):
     plt.show()
     
 def test_normal_distribution():
-    test_scores = [student.test_grades for student in Objects.students]
+    test_scores = [grade for student in Objects.students for grade in student.test_grades]
 
     mean = np.mean(test_scores)
     std_dev = np.std(test_scores)
@@ -111,9 +111,10 @@ def test_normal_distribution():
     plt.text(0.5, 0.5, f"Mean: {mean}\nStandard Deviation: {std_dev}",
                 fontsize=12, transform=plt.gca().transAxes)
     plt.show()
+
     
 def homework_normal_distribution():
-    homework_scores = [student.homework_grades for student in Objects.students]
+    homework_scores = [grade for student in Objects.students for grade in student.homework_grades]
 
     mean = np.mean(homework_scores)
     std_dev = np.std(homework_scores)

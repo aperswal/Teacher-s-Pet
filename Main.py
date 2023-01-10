@@ -75,9 +75,17 @@ def main():
         Visualizations.homework_normal_distribution()
         
     # Specific Class Test Normal Distribution
-    
+    class_test_distribution_look_up = input("Would you like to see a normal distribution of a specific class's test scores? (y/n) ")
+    class_test_distribution_look_up.lower()
+    if (class_test_distribution_look_up=="y"):
+        class_test_distribution_checker = input("Which class do you want to inquire about? ")
+        Visualizations.class_test_distribution(class_test_distribution_checker)
+        
     # Specific Class Homework Normal Distribution
-    
-    
+    class_homework_distribution_look_up = input("Would you like to see a normal distribution of a specific class's homework scores? (y/n) ")
+    class_homework_distribution_look_up.lower()
+    if (class_homework_distribution_look_up=="y"):
+        class_homework_distribution_checker = input("Which class do you want to inquire about? ")
+        Visualizations.class_homework_distribution(class_homework_distribution_checker)
     
 main()
